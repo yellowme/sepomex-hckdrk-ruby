@@ -4,7 +4,7 @@ require 'sepomex/client/json_api'
 require 'sepomex/client/api_client'
 
 require 'sepomex/error'
-require 'sepomex/structs/postal_code'
+require 'sepomex/structs/zip_code'
 
 require 'sepomex/general'
 

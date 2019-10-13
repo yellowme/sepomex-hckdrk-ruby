@@ -1,7 +1,7 @@
 module SEPOMEX
-  PostalCode =
+  ZipCode =
     Struct.new(
-      :cp,
+      :zip_code,
       :settlement,
       :settlement_type,
       :municipality,

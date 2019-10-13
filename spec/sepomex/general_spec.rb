@@ -40,16 +40,16 @@ describe SEPOMEX::General do
         status: 200
       )
 
-      postal_code = SEPOMEX::General.info_cp(postal_code: '97305')
+      zip_code = SEPOMEX::General.info_zip_code(zip_code: '97305')
 
-      expect(postal_code).to be_a(SEPOMEX::PostalCode)
-      expect(postal_code.cp).to eq('97305')
-      expect(postal_code.settlement).to eq('Granjas Cholul')
-      expect(postal_code.settlement_type).to eq('Colonia')
-      expect(postal_code.municipality).to eq('Mérida')
-      expect(postal_code.state).to eq('Yucatán')
-      expect(postal_code.city).to eq('')
-      expect(postal_code.country).to eq('México')
+      expect(zip_code).to be_a(SEPOMEX::ZipCode)
+      expect(zip_code.zip_code).to eq('97305')
+      expect(zip_code.settlement).to eq('Granjas Cholul')
+      expect(zip_code.settlement_type).to eq('Colonia')
+      expect(zip_code.municipality).to eq('Mérida')
+      expect(zip_code.state).to eq('Yucatán')
+      expect(zip_code.city).to eq('')
+      expect(zip_code.country).to eq('México')
     end
 
     it 'raises error whith invalid cp' do
@@ -67,7 +67,7 @@ describe SEPOMEX::General do
       )
 
       begin
-        postal_code = SEPOMEX::General.info_cp(postal_code: '97305123')
+        zip_code = SEPOMEX::General.info_zip_code(zip_code: '97305123')
       rescue => exception
         expect(exception).to be_a(SEPOMEX::RequestError)
       end
