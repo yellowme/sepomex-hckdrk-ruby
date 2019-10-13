@@ -48,7 +48,7 @@ describe SEPOMEX::General do
       expect(zip_code.settlement_type).to eq('Colonia')
       expect(zip_code.municipality).to eq('Mérida')
       expect(zip_code.state).to eq('Yucatán')
-      expect(zip_code.city).to eq('')
+      expect(zip_code.city).to be_nil
       expect(zip_code.country).to eq('México')
     end
 
