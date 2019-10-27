@@ -2,6 +2,6 @@ require 'webmock/rspec'
 require 'rspec'
 require 'simplecov'
 
-require 'sepomex'
+require 'sepomex_hckdrk'
 
 SimpleCov.start { add_filter '/spec/' }

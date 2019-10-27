@@ -1,4 +1,4 @@
-module SEPOMEX
+module SEPOMEX_HCKDRK
   class Error < StandardError
     attr_reader :response
 

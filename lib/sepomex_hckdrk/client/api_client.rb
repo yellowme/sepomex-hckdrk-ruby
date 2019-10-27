@@ -1,8 +1,8 @@
 require 'singleton'
 
-module SEPOMEX
+module SEPOMEX_HCKDRK
   class ApiClient
-    include SEPOMEX::JsonApi
+    include SEPOMEX_HCKDRK::JsonApi
 
     def self.config
       yield self

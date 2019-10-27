@@ -1,14 +1,14 @@
 require 'json'
 
-require 'sepomex/client/json_api'
-require 'sepomex/client/api_client'
+require 'sepomex_hckdrk/client/json_api'
+require 'sepomex_hckdrk/client/api_client'
 
-require 'sepomex/error'
-require 'sepomex/structs/zip_code'
+require 'sepomex_hckdrk/error'
+require 'sepomex_hckdrk/structs/zip_code'
 
-require 'sepomex/general'
+require 'sepomex_hckdrk/general'
 
-module SEPOMEX
+module SEPOMEX_HCKDRK
   @api_base = 'https://api-sepomex.hckdrk.mx/'
 
   def self.config

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SEPOMEX::General do
+describe SEPOMEX_HCKDRK::General do
   describe '.info_cp' do
     it 'successfully creates a customer' do
       stub_request(:get, 'https://api-sepomex.hckdrk.mx/query/info_cp/97305').to_return(
@@ -40,9 +40,9 @@ describe SEPOMEX::General do
         status: 200
       )
 
-      zip_code = SEPOMEX::General.info_zip_code(zip_code: '97305')
+      zip_code = SEPOMEX_HCKDRK::General.info_zip_code(zip_code: '97305')
 
-      expect(zip_code).to be_a(SEPOMEX::ZipCode)
+      expect(zip_code).to be_a(SEPOMEX_HCKDRK::ZipCode)
       expect(zip_code.zip_code).to eq('97305')
       expect(zip_code.settlement).to eq('Granjas Cholul')
       expect(zip_code.settlement_type).to eq('Colonia')
@@ -67,9 +67,9 @@ describe SEPOMEX::General do
       )
 
       begin
-        zip_code = SEPOMEX::General.info_zip_code(zip_code: '97305123')
+        zip_code = SEPOMEX_HCKDRK::General.info_zip_code(zip_code: '97305123')
       rescue => exception
-        expect(exception).to be_a(SEPOMEX::RequestError)
+        expect(exception).to be_a(SEPOMEX_HCKDRK::RequestError)
       end
     end
   end

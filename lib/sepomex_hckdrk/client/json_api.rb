@@ -1,6 +1,6 @@
 require 'httparty'
 
-module SEPOMEX
+module SEPOMEX_HCKDRK
   module JsonApi
     module ClassMethods
       def default_headers
@@ -11,7 +11,7 @@ module SEPOMEX
 
       def api_get(url:, headers: {})
         custom_headers = headers.merge(default_headers)
-        response = HTTParty.get(SEPOMEX.api_base + url, headers: custom_headers)
+        response = HTTParty.get(SEPOMEX_HCKDRK.api_base + url, headers: custom_headers)
 
         JSON.parse(response.body, symbolize_names: true)
       end
@@ -21,7 +21,7 @@ module SEPOMEX
 
         response =
           HTTParty.post(
-            SEPOMEX.api_base + url,
+            SEPOMEX_HCKDRK.api_base + url,
             body: body.to_json, headers: custom_headers
           )
 
@@ -33,7 +33,7 @@ module SEPOMEX
 
         response =
           HTTParty.post(
-            SEPOMEX.api_base + url,
+            SEPOMEX_HCKDRK.api_base + url,
             multipart: true, body: body, headers: custom_headers
           )
 
