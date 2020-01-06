@@ -1,10 +1,10 @@
 PATH
   remote: .
   specs:
-    sepomex_hckdrk (0.1.0)
+    sepomex_hckdrk (0.2.0)
       activesupport (~> 6.0)
       httparty (~> 0.17)
-      json (~> 2.2)
+      json (~> 2.1)
 
 GEM
   remote: https://rubygems.org/
