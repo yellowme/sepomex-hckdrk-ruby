@@ -1,2 +1,2 @@
 # sepomex-hckdrk-ruby
-Ruby Bindings for SEPOMEX API
+Ruby Bindings for SEPOMEX HCKDRK API
