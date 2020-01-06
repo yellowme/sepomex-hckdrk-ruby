@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'sepomex-hckdrk-ruby'
-  s.version     = '0.4.0'
+  s.version     = '0.5.0'
   s.date        = '2019-10-10'
   s.summary     = "Ruby Bindings for SEPOMEX API"
   s.description = "Ruby Bindings for SEPOMEX API"
@@ -11,6 +11,11 @@ Gem::Specification.new do |s|
   s.license      = 'MIT'
 
   s.add_dependency 'httparty'
+  s.add_dependency "json"
+  s.add_dependency 'activesupport'
 
-  s.add_runtime_dependency 'json', '~> 1.8'
+  s.add_development_dependency "rspec"
+  s.add_development_dependency "webmock"
+  s.add_development_dependency "simplecov"
+  s.add_development_dependency "prettier"
 end
