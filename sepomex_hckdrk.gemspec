@@ -17,8 +17,8 @@ Gem::Specification.new do |spec|
   spec.license      = 'MIT'
 
   spec.add_dependency 'httparty', "~> 0.17"
-  spec.add_dependency "json", "~> 2.1"
-  spec.add_dependency 'activesupport', "~> 6.0"
+  spec.add_dependency "json", "~> 2.0"
+  spec.add_dependency 'activesupport', "~> 5.2"
 
   spec.add_development_dependency "rspec", "~> 3.8"
   spec.add_development_dependency "webmock", "~> 3.7"
