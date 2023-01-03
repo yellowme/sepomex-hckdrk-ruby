@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://rubygems.org/gems/sepomex-hckdrk-ruby'
   spec.license      = 'MIT'
 
-  spec.add_dependency 'httparty', "~> 0.16.0"
+  spec.add_dependency 'httparty', ">= 0.16", "< 0.22"
   spec.add_dependency "json", "~> 2.0"
   spec.add_dependency 'activesupport', ">= 5.2"
 
